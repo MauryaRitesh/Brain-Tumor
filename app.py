@@ -17,7 +17,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key="AIzaSyB48mwE6_3PXPWdIGAJBjHpl2khYxd5ecM")
 
 output_dir = 'saliency_maps'
 os.makedirs(output_dir, exist_ok=True)
@@ -170,9 +170,9 @@ if uploaded_file is not None:
 
   col1, col2 = st.columns(2)
   with col1:
-    st.image(uploaded_file, caption='Uploaded Image', use_column_width=True)
+    st.image(uploaded_file, caption=' ', use_column_width=True)
   with col2:
-    st.image(saliency_map, caption='Saliency Map', use_column_width=True)
+    st.image(saliency_map, caption=' ', use_column_width=True)
 
 
   st.write("## Classification Results")
